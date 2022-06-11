@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import ItemDesc from "../components/ItemDesc";
 import CardTitle from "../components/CardTitle";
+import Cards from "../components/Cards";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Banner />
         <ItemDesc />
         <CardTitle />
+        <Cards/>
       </div>
     </div>
   );
