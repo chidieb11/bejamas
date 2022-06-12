@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const ItemDesc = () => {
   return (
-    <div className="sm:mr-20 sm:ml-20">
-      <div className="flex justify-between flex-col sm:flex-row gap-5">
+    <div className="lg:mr-20 lg:ml-20">
+      <div className="flex justify-between flex-col lg:flex-row gap-5">
         <div className="">
           <h1 className="capitalize mb-3 text-2xl font-bold">
             about the vegetable salad
