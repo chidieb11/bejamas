@@ -1,41 +1,63 @@
 import Image from "next/image";
+import {
+  meal1Image,
+  meal2Image,
+  meal3Image,
+  nature1Image,
+  pet1Image,
+} from "../assets/imgs";
+import Checkbox from "./Checkbox";
+
+const items = [
+  { name: "Vegetable Salad", price: "10", category: "food", image: meal3Image },
+  { name: "Fruit Salad", price: "12", category: "food", image: meal1Image },
+  { name: "Pasta", price: "22", category: "food", image: meal2Image },
+  { name: "Cute Rabbit", price: "50", category: "pet", image: pet1Image },
+  {
+    name: "Snow Mountain",
+    price: "82",
+    category: "nature",
+    image: nature1Image,
+  },
+];
 
 const Cards = () => {
   return (
-    <div className="sm:mr-20 sm:ml-20 mb-10">
+    <div className="container mb-10">
       <div className="parent flex justify-between">
         <div className="left mr-5">
           <div className="category">
             <h1 className="capitalize font-bold text-2xl mb-3">category</h1>
-            <div className="flex flex-col sm:text-xl">
-              <span className="capitalize">
+            <div className=" sm:text-xl">
+              <Checkbox isChecked={false} title="chidi" />
+              <div className="capitalize">
                 <input type="checkbox" className="mr-4" />
                 people
-              </span>
-              <span className="capitalize">
+              </div>
+              <div className="capitalize">
                 <input type="checkbox" className="mr-4" />
                 premium
-              </span>
-              <span className="capitalize">
+              </div>
+              <div className="capitalize">
                 <input type="checkbox" className="mr-4" />
                 pets
-              </span>
-              <span className="capitalize">
+              </div>
+              <div className="capitalize">
                 <input type="checkbox" className="mr-4" />
                 food
-              </span>
-              <span className="capitalize">
+              </div>
+              <div className="capitalize">
                 <input type="checkbox" className="mr-4" />
                 landmarks
-              </span>
-              <span className="capitalize">
+              </div>
+              <div className="capitalize">
                 <input type="checkbox" className="mr-4" />
                 cities
-              </span>
-              <span className="capitalize">
+              </div>
+              <div className="capitalize">
                 <input type="checkbox" className="mr-4" />
                 nature
-              </span>
+              </div>
             </div>
           </div>
           <div className="price mt-3">
@@ -60,85 +82,22 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div className="right sm:grid sm:grid-cols-3 sm:gap-6">
-          <div className="card">
-            <Image
-              src={
-                "https://bejamas-store.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdavien21%2Fimage%2Fupload%2Fv1634581616%2Fbejamas-test%2Fpexels-ella-olsson-1640777_vokrpz.jpg&w=384&q=75"
-              }
-              width={350}
-              height={350}
-              objectFit="cover"
-            />
-            <h2 className="capitalize text-gray-700">food</h2>
-            <h3 className="capitalize font-bold text-xl">vegetable salad</h3>
-            <span className="text-gray-700">$10</span>
-          </div>
-          <div className="card">
-            <Image
-              src={
-                "https://bejamas-store.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdavien21%2Fimage%2Fupload%2Fv1633647823%2Fbejamas-test%2Fsnow-mountain_bfxr9o.jpg&w=384&q=75"
-              }
-              width={350}
-              height={350}
-              objectFit="cover"
-            />
-            <h2 className="capitalize text-gray-700">nature</h2>
-            <h3 className="capitalize font-bold text-xl">Snow Mountain</h3>
-            <span className="text-gray-700">$10</span>
-          </div>
-          <div className="card">
-            <Image
-              src={
-                "https://bejamas-store.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdavien21%2Fimage%2Fupload%2Fv1633647613%2Fbejamas-test%2Ffruit-salad_luanzq.jpg&w=384&q=75"
-              }
-              width={350}
-              height={350}
-              objectFit="cover"
-            />
-            <h2 className="capitalize text-gray-700">food</h2>
-            <h3 className="capitalize font-bold text-xl">Fruit Salad</h3>
-            <span className="text-gray-700">$10</span>
-          </div>
-          <div className="card">
-            <Image
-              src={
-                "https://bejamas-store.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdavien21%2Fimage%2Fupload%2Fv1633647611%2Fbejamas-test%2Fa-beautiful-girl_rowmzu.jpg&w=384&q=75"
-              }
-              width={350}
-              height={350}
-              objectFit="cover"
-            />
-            <h2 className="capitalize text-gray-700">premium</h2>
-            <h3 className="capitalize font-bold text-xl">Pretty Black Model</h3>
-            <span className="text-gray-700">$10</span>
-          </div>
-          <div className="card">
-            <Image
-              src={
-                "https://bejamas-store.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdavien21%2Fimage%2Fupload%2Fv1633647822%2Fbejamas-test%2Frabbit_ikq6nc.jpg&w=384&q=75"
-              }
-              width={350}
-              height={350}
-              objectFit="cover"
-            />
-            <h2 className="capitalize text-gray-700">pets</h2>
-            <h3 className="capitalize font-bold text-xl">Cute Rabbit</h3>
-            <span className="text-gray-700">$10</span>
-          </div>
-          <div className="card">
-            <Image
-              src={
-                "https://bejamas-store.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdavien21%2Fimage%2Fupload%2Fv1633647822%2Fbejamas-test%2Floving-father_crxsic.jpg&w=384&q=75"
-              }
-              width={350}
-              height={350}
-              objectFit="cover"
-            />
-            <h2 className="capitalize text-gray-700">people</h2>
-            <h3 className="capitalize font-bold text-xl">Loving Father</h3>
-            <span className="text-gray-700">$10</span>
-          </div>
+        <div className="right sm:grid sm:grid-cols-4 sm:gap-6">
+          {items.map((item, index) => {
+            return (
+              <div className="card" key={index}>
+                <Image
+                  src={item.image}
+                  width={350}
+                  height={350}
+                  objectFit="cover"
+                />
+                <h2 className="capitalize text-gray-700">{item.category}</h2>
+                <h3 className="capitalize font-bold text-xl">{item.name}</h3>
+                <span className="text-gray-700">${item.price}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

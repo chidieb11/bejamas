@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo:300,400,600,700");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: Archivo, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.full-img * {
+  width: 100% !important;
+}
+
+.navbar {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+  border-left: 1px solid hsla(0, 0%, 100%, 0.5);
+  background: hsla(0, 0%, 100%, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+
+.navbar-counter {
+  position: absolute;
+  right: 0;
+}

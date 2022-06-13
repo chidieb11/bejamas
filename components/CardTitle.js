@@ -2,7 +2,7 @@ import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 
 const CardTitle = () => {
   return (
-    <div className="sm:mr-20 sm:ml-20">
+    <div className="container">
       <div className="flex justify-between mb-10">
         <div>
           <h1 className="capitalize sm:text-2xl">
